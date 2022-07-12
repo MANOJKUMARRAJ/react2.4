@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+const List=(props)=>{
+  return <p>{props.tasks.join(",")}</p>
+};
+export default function Todo(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>To Do Lists</h1>
+      <h2>Today</h2>
+      <List tasks={["wakeup","eat","sleep"]}/>
+      <h2>Tomorrow</h2>
+      <List tasks={["study","code","eat","sleep"]}/>
     </div>
-  );
+  )
 }
-
-export default App;
